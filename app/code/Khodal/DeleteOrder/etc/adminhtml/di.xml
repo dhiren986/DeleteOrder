@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+ <!--
+ /**
+ * @author Khodal
+ * @copyright Copyright (c) khodal
+ * @package DeleteOrder for Magento 2
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\Magento\Sales\Block\Adminhtml\Order\Invoice\View">
+        <plugin name="Khodal_DeleteOrder::pluginAfterInvoice" type="Khodal\DeleteOrder\Plugin\Invoice\PluginAfter" />
+    </type>
+
+    <type name="\Magento\Sales\Block\Adminhtml\Order\Creditmemo\View">
+        <plugin name="Khodal_DeleteOrder::pluginAfterCreditmemo" type="Khodal\DeleteOrder\Plugin\Creditmemo\PluginAfter" />
+    </type>
+
+    <type name="\Magento\Shipping\Block\Adminhtml\View">
+        <plugin name="Khodal_DeleteOrder::pluginAfterShipment" type="Khodal\DeleteOrder\Plugin\Shipment\PluginAfter" />
+    </type>
+
+    <type name="\Magento\Sales\Block\Adminhtml\Order\View">
+        <plugin name="Khodal_DeleteOrder::pluginAfterOrder" type="Khodal\DeleteOrder\Plugin\Order\PluginAfter" />
+    </type>
+</config>

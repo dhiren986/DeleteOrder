@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+ <!--
+ /**
+ * @author Khodal
+ * @copyright Copyright (c) khodal
+ * @package DeleteOrder for Magento 2
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Khodal_DeleteOrder::khodal_delete_order" title="Khodal Commerce" sortOrder="100">
+                    <resource id="Khodal_DeleteOrder::delete_order" title="Delete Order" sortOrder="80"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
